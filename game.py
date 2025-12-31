@@ -85,3 +85,16 @@ class Person(Entity):
         self.address = address
         self.position = position
         self.ability_list: list[str] = []
+
+    def add_ability(self, ability: str) -> None:
+        """Adds na ability to the ability list if the person doesn't already have this ability.
+
+        Args:
+            ability (str): Ability to be added to the ability list.
+
+        Raises:
+            ValueError: If the person already has the specified ability.
+        """
+        if ability.lower() in self.ability_list:
+            raise ValueError("This person already has this ability")
+        self.ability_list.append(ability.lower())
