@@ -98,3 +98,20 @@ class Person(Entity):
         if ability.lower() in self.ability_list:
             raise ValueError("This person already has this ability")
         self.ability_list.append(ability.lower())
+
+    def list_abilities(self) -> list[str]:
+        """Lists all the abilites of the person
+
+        Returns:
+            list[str]: List of the person's abilities
+        """
+        return self.ability_list
+    def __str__(self) -> str:
+        """Returns a string representation of the person.
+
+        Returns:
+            str: SString containing the person's name and formatted abilities.
+        """
+        abilities = ", ".join(self.ability_list)
+
+        return f"Person: {self.name}, Abilites: {abilities}"
