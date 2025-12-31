@@ -61,6 +61,10 @@ class Game(Entity):
         self.engine = engine
         self.status = status
 
+    def __str__(self):
+        status = "Active" if self.active else "Inactive"
+        return f"Game: {self.name}. Status: {status}"
+
 class Person(Entity):
     """Represents a person, which is an entity in the system.
     

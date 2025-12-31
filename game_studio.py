@@ -32,9 +32,9 @@ class GameStudio:
         """Lists all the games of the game studio.
 
         Returns:
-            list: A list of the game studio's games.
+            list: A list of string representations of the studio's games.
         """
-        return self.__gamelist
+        return [str(game) for game in self.__gamelist]
 
     def set_active(self, active: bool) -> None:
         """Sets the active state of the game studio.
