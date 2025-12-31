@@ -62,6 +62,11 @@ class Game(Entity):
         self.status = status
 
     def __str__(self):
+        """Returns a string representation of the game.
+
+        Returns:
+            str: String containing the game's name and status.
+        """
         status = "Active" if self.active else "Inactive"
         return f"Game: {self.name}. Status: {status}"
 
@@ -114,7 +119,7 @@ class Person(Entity):
         """Returns a string representation of the person.
 
         Returns:
-            str: SString containing the person's name and formatted abilities.
+            str: String containing the person's name and formatted abilities.
         """
         abilities = ", ".join(self.ability_list)
 
