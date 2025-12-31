@@ -78,8 +78,10 @@ class Person(Entity):
             email (str): E-mail address of the person.
             address (str): Address of the person.
             position (str): Occupation of the person in the game sudio.
+
         """
         super().__init__(name)
         self.email = email
         self.address = address
         self.position = position
+        self.ability_list: list[str] = []
